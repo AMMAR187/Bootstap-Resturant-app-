@@ -25,16 +25,49 @@
             <a class="navbar-brand" href="./index.html"><img src="img/logo.png" class="" height="30" width="41"></a>
             
             <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                 <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul>
+            <span class="navbar-text">
+                <a data-target="#loginModel" data-toggle="modal"><span class="fa fa-sign-in"></span>Login</a>
+            </span>
             </div> 
         </div>
     </nav>
-
+    <div class="modal fade" role="dialog" id="loginModel">
+        <div class="modal-dialog" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" >Login</h4>
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="ExampleInputpassword3">Email address</label>
+                            <input type="email" class="form-control form-control-sm " id="ExampleInputpassword3" placeholder="Email"></input>
+                        </div>
+                    <div class="form-group">
+                            <label class="sr-only" for="pass">Password</label>
+                            <input type="Password" class="form-control form-control-sm " id="pass" placeholder="Password"></input>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input">Remember me </input>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -46,7 +79,7 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col col-sm align-self-center ">
-                    <a href="#reserve" class="btn btn-warning btn-block"> Reserve A Table</a>
+                    <a href="#reserve" role="btn" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+91 12345679</strong>" data-placement="bottom" class="btn nav-link btn-warning btn-sm btn-block"> Reserve A Table</a>
                 </div>
             </div>
         </div>
@@ -197,6 +230,11 @@
    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script >
+        $(document).ready(function () {
+           $('[data-toggle="tooltip"]').tooltip(); 
+        });
+    </script>
 </body>
 
 </html>
