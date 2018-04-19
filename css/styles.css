@@ -54,3 +54,15 @@ body {
   right: 0;
   position: absolute;
   bottom: 0; }
+
+.modal-header {
+  background-color: #521da8;
+  color: white; }
+  .modal-header button:hover {
+    color: floralwhite; }
+
+.modal-body {
+  background-color: #d1c4e9; }
+
+.modal-footer {
+  background-color: #9575cd; }

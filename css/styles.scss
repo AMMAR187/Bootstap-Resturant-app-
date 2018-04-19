@@ -73,3 +73,17 @@ body{
 	position: absolute;
 	bottom: 0;
 }
+
+.modal-header{
+  background-color:$background-dark;
+  color:white;
+  button:hover{
+     color:floralwhite;
+  }
+}
+.modal-body{
+  background-color:$background-pale;
+}
+.modal-footer{
+  background-color:$background-light;
+}
